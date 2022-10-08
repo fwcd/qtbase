@@ -3,7 +3,7 @@
 
 TEMPLATE = lib
 TARGET = qtmain
-DESTDIR = $$QT.core.libs
+DESTDIR = $$QT.core.libs/manual-link
 
 CONFIG += static
 QT = core
@@ -27,7 +27,12 @@ winrt {
 }
 
 load(qt_installs)
-
+!qt_no_install_library {
+    host_build: \
+        target.path = $$[QT_HOST_LIBS]/manual-link
+    else: \
+        target.path = $$[QT_INSTALL_LIBS]/manual-link
+}
 TARGET = $$qtLibraryTarget($$TARGET$$QT_LIBINFIX) #do this towards the end
 
 load(qt_targets)
