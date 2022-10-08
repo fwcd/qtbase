@@ -12,7 +12,7 @@
 #include <stdint.h>
 #include <array>
 
-#if defined(_WIN32)
+#if defined(_WIN32) && !defined(ANGLE_PLATFORM_EXPORT)
 #   if !defined(LIBANGLE_IMPLEMENTATION)
 #       define ANGLE_PLATFORM_EXPORT __declspec(dllimport)
 #   else

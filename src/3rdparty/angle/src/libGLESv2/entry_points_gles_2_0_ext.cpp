@@ -3505,7 +3505,7 @@ ANGLE_EXPORT void GL_APIENTRY GetQueryObjectui64vRobustANGLE(GLuint id,
     }
 }
 
-GL_APICALL void GL_APIENTRY FramebufferTextureMultiviewLayeredANGLE(GLenum target,
+ANGLE_EXPORT void GL_APIENTRY FramebufferTextureMultiviewLayeredANGLE(GLenum target,
                                                                     GLenum attachment,
                                                                     GLuint texture,
                                                                     GLint level,
@@ -3530,7 +3530,7 @@ GL_APICALL void GL_APIENTRY FramebufferTextureMultiviewLayeredANGLE(GLenum targe
     }
 }
 
-GL_APICALL void GL_APIENTRY FramebufferTextureMultiviewSideBySideANGLE(GLenum target,
+ANGLE_EXPORT void GL_APIENTRY FramebufferTextureMultiviewSideBySideANGLE(GLenum target,
                                                                        GLenum attachment,
                                                                        GLuint texture,
                                                                        GLint level,
