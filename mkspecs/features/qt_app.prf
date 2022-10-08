@@ -28,9 +28,10 @@ host_build:force_bootstrap {
         QT += bootstrap-private
     }
     target.path = $$[QT_HOST_BINS]
+    CONFIG += relative_qt_rpath  # Qt's tools and apps should be relocatable
 } else {
     !build_pass:qtConfig(debug_and_release): CONFIG += release
-    target.path = $$[QT_INSTALL_BINS]
+    target.path = $$[QT_HOST_BINS]
     CONFIG += relative_qt_rpath  # Qt's tools and apps should be relocatable
 }
 INSTALLS += target
